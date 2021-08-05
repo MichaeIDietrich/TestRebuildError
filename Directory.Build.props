@@ -1,0 +1,15 @@
+<Project>
+  
+  <PropertyGroup>
+    <!-- use a shared output directory -->
+    <BaseOutputPath>..\bin\</BaseOutputPath>
+    
+    <!-- setting this property seems to fix this issue and might be the recommended way -->
+<!--    <UseCommonOutputDirectory>true</UseCommonOutputDirectory>-->
+    
+    <!-- simply move obj folder out of projects, not relevant for this issue -->
+    <BaseIntermediateOutputPath>..\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>..\obj\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+  </PropertyGroup>
+  
+</Project>
